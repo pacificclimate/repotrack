@@ -55,8 +55,6 @@ def table_builder(filter):
     if filter:
         data = filtering(data)
     
-    print(data)
-    
     rows = ""
     for repo_name, tools in data.items():
         row = f"| [{repo_name}](https://github.com/pacificclimate/{repo_name}) |"
