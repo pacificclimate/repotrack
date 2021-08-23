@@ -58,7 +58,7 @@ def table_builder():
     
     rows = ""
     for repo_name, tools in data.items():
-        row = f"| {repo_name} |"
+        row = f"| [{repo_name}](https://github.com/pacificclimate/{repo_name}) |"
         for col in cols:
             if col in tools:
                 row += f" **X** |"
