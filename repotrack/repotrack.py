@@ -1,94 +1,74 @@
-from os import write
-from checks import checklist
+import click
 from github import Github
 import json
-import click
+
+from checks import checklist
+from utils import table_builder, table_to_file, load_from_file
 
 
-def content_search(hub):
-    results = {}
-    for repo in hub.get_user().get_repos():
-        if repo.organization and repo.organization.login == "pacificclimate":
-            results[repo.name] = []
-            for name, method in checklist.items():
-                if method(repo):
-                    results[repo.name] += [name]
+def search_for_devops(gat, organization):
+    """Create json file with DevOps tool usage details"""
+    hub = Github(gat)
 
-    with open("repotrack/data.json", "w") as f:
-        json.dump(results, f)
+    def devops_checklist(repo):
+        """Helper method to build list of devops tools used with help from `checklist`"""
+        stuff = [name for name, method in checklist.items() if method(repo)]
 
+    devops_data = {
+        repo.name: devops_checklist(repo)
+        for repo in hub.get_user().get_repos()
+        if repo.organization and repo.organization.login == organization
+    }
 
-def unique_cols(data):
-    cols = set()
-    for _, items in data.items():
-        for tool in items:
-            cols.add(tool)
-    
-    return sorted(cols)
-
-
-def build_header(cols):
-    header = "| Repo |"
-    for col in cols:
-        header += f" {col} |"
-    
-    header += "\n|:-:|" + ":-:|" * len(cols)
-    return header + "\n"
-
-
-def table_builder(filter):
-    with open("repotrack/data.json", "r") as f:
-        data = json.loads(f.read())
-    
-    cols = unique_cols(data)
-    header = build_header(cols)
-
-        
-    def filtering(to_filter):
-        filtered = {}
-        for key, value in to_filter.items():
-            if value:
-                filtered[key] = value
-        
-        return filtered
-    
-    if filter:
-        data = filtering(data)
-    
-    rows = ""
-    for repo_name, tools in data.items():
-        row = f"| [{repo_name}](https://github.com/pacificclimate/{repo_name}) |"
-        for col in cols:
-            if col in tools:
-                row += f" **X** |"
-            else:
-                row += f" |"
-        row += "\n"
-        rows += row
-    
-    return header + rows
-
-
-def write_readme(table):
-    # Clear old data before rewriting
-    open("README.md", "w").close()
-
-    with open("README.md", "w") as f:
-        f.write(table)
+    return devops_data
 
 
 @click.command()
-@click.option("--pat", "-p", help="Github access token")
-@click.option("--filter", "-f", is_flag=True, default=False, help="Filter out repos that have no checkboxes")
-@click.option("--write-from-data", "-d", is_flag=True, default=False, help="Write README.md table from stored data")
-def main(pat, filter, write_from_data):
-    if not write_from_data:
-        content_search(Github(pat))
+@click.option("--gat", "-g", help="Github access token")
+@click.option(
+    "--organization", "-o", default="pacificclimate", help="Target organization"
+)
+@click.option(
+    "--savepath",
+    "-s",
+    default="",
+    help="Filepath to json file where you wish to save collected data",
+)
+@click.option(
+    "--loadpath",
+    "-l",
+    default="",
+    help="Write DevOps table from stored data",
+)
+@click.option(
+    "--no-empties",
+    "-n",
+    is_flag=True,
+    default=False,
+    help="Filter out repos that have no DevOps tools",
+)
+def main(gat, organization, savepath, loadpath, no_empties):
+    """Run through process of collecting repo data and reporting it to a file"""
+    print("Starting...")
+    if loadpath:
+        print("Loading from file")
+        devops_data = load_from_file(loadpath)
 
-    table = table_builder(filter) 
-    write_readme(table)
+    else:
+        print("Searching with Github API")
+        devops_data = search_for_devops(gat, organization)
+
+    if savepath:
+        print("Saving for later...")
+        with open(savepath, "w") as f:
+            json.dump(devops_data, f)
+
+    print("Building table")
+    table = table_builder(devops_data, organization, no_empties)
+
+    print("Writing table")
+    table_to_file(table)
 
 
 if __name__ == "__main__":
     main()
-    

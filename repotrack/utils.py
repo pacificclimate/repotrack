@@ -1,4 +1,9 @@
+from os import write
+import json
+
+
 def get_contents(repo, path=""):
+    """Return path contents as list"""
     try:
         contents = [content.path for content in repo.get_contents(path)]
     except Exception as e:
@@ -9,6 +14,7 @@ def get_contents(repo, path=""):
 
 
 def check_topics(repo, target):
+    """Generaric check for repo topics"""
     topics = repo.get_topics()
 
     if target in topics:
@@ -16,3 +22,70 @@ def check_topics(repo, target):
 
     else:
         return False
+
+
+def unique_cols(data):
+    """Create sorted list of unique DevOps tools used"""
+    cols = set()
+    for _, tools in data.items():
+        for tool in tools:
+            cols.add(tool)
+
+    return sorted(cols)
+
+
+def build_header(cols):
+    """Build README table header"""
+    header = "| Repo |"
+    for col in cols:
+        header += f" {col} |"
+
+    header += "\n|:-:|" + ":-:|" * len(cols)
+    return header + "\n"
+
+
+def load_from_file(loadpath):
+    """Loads json into dict"""
+    with open(loadpath, "r") as f:
+        data = json.loads(f.read())
+
+    return data
+
+
+def table_builder(devops_data, organization, no_empties):
+    """Build a markdown table out of the collected data"""
+    cols = unique_cols(devops_data)
+    header = build_header(cols)
+
+    def filtering(to_filter):
+        filtered = {}
+        for key, value in to_filter.items():
+            if value:
+                filtered[key] = value
+
+        return filtered
+
+    if no_empties:
+        devops_data = filtering(devops_data)
+
+    rows = ""
+    for repo_name, tools in devops_data.items():
+        row = f"| [{repo_name}](https://github.com/{organization}/{repo_name}) |"
+        for col in cols:
+            if col in tools:
+                row += f" **X** |"
+            else:
+                row += f" |"
+        row += "\n"
+        rows += row
+
+    return header + rows
+
+
+def table_to_file(table, filename="README"):
+    """Write DevOps tool table to markdown file"""
+    # Remove old stuff beforehand
+    open(f"{filename}.md", "w").close()
+
+    with open(f"{filename}.md", "w") as f:
+        f.write(table)

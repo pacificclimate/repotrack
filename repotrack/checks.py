@@ -2,6 +2,7 @@ from utils import get_contents, check_topics
 
 
 def actions(repo):
+    """Check for actions"""
     if not get_contents(repo, ".github/workflows"):
         return False
 
@@ -10,6 +11,7 @@ def actions(repo):
 
 
 def anchore(repo):
+    """Check for anchore"""
     path = ".github/workflows"
     contents = get_contents(repo, path)
 
@@ -24,10 +26,12 @@ def anchore(repo):
 
 
 def daccs(repo):
+    """Check for daccs"""
     return check_topics(repo, "daccs")
 
 
 def docker(repo):
+    """Check for docker"""
     root_contents = get_contents(repo)
 
     if "Dockerfile" in root_contents:
@@ -42,6 +46,7 @@ def docker(repo):
 
 
 def jenkins(repo):
+    """Check for jenkins"""
     root_contents = get_contents(repo)
 
     if "Jenkinsfile" in root_contents:
@@ -56,6 +61,7 @@ def jenkins(repo):
 
 
 def make(repo):
+    """Check for make"""
     if "Makefile" in get_contents(repo):
         return True
 
@@ -64,6 +70,7 @@ def make(repo):
 
 
 def pip(repo):
+    """Check for pip"""
     root_contents = get_contents(repo)
 
     for req_file in [
@@ -79,6 +86,7 @@ def pip(repo):
 
 
 def pipenv(repo):
+    """Check for pipenv"""
     root_contents = get_contents(repo)
 
     for req_file in ["Pipfile", "Pipfile.lock"]:
@@ -89,6 +97,7 @@ def pipenv(repo):
 
 
 def snyk(repo):
+    """Check for snyk"""
     return check_topics(repo, "snyk")
 
 
