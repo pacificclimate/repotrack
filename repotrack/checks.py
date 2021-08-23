@@ -2,7 +2,7 @@ from utils import get_contents, check_topics
 
 
 def actions(repo):
-    if get_contents(repo, ".github/workflows"):
+    if not get_contents(repo, ".github/workflows"):
         return False
 
     else:
