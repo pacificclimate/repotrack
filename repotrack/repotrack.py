@@ -1,15 +1,11 @@
+from os import write
 from checks import checklist
 from github import Github
 import json
 import click
 
 
-def writer(results):
-    with open("repotrack/data.json", "w") as f:
-        json.dump(results, f)
-
-
-def content_search(hub, filter):
+def content_search(hub):
     results = {}
     for repo in hub.get_user().get_repos():
         if repo.organization and repo.organization.login == "pacificclimate":
@@ -18,18 +14,8 @@ def content_search(hub, filter):
                 if method(repo):
                     results[repo.name] += [name]
 
-    def filtering(to_filter):
-        filtered = {}
-        for key, value in to_filter.items():
-            if value:
-                filtered[key] = value
-        
-        return filtered
-    
-    if filter:
-        writer(filtering(results))
-    else:
-        writer(results)
+    with open("repotrack/data.json", "w") as f:
+        json.dump(results, f)
 
 
 def unique_cols(data):
@@ -49,12 +35,27 @@ def build_header(cols):
     header += "\n|:-:|" + ":-:|" * len(cols)
     return header + "\n"
 
-def table_builder():
+
+def table_builder(filter):
     with open("repotrack/data.json", "r") as f:
         data = json.loads(f.read())
     
     cols = unique_cols(data)
     header = build_header(cols)
+
+        
+    def filtering(to_filter):
+        filtered = {}
+        for key, value in to_filter.items():
+            if value:
+                filtered[key] = value
+        
+        return filtered
+    
+    if filter:
+        data = filtering(data)
+    
+    print(data)
     
     rows = ""
     for repo_name, tools in data.items():
@@ -70,16 +71,24 @@ def table_builder():
     return header + rows
 
 
-@click.command()
-@click.option("--pat", "-p", help="Github access token")
-@click.option("--filter", "-f", is_flag=True, default=True, help="Filter out repos that have no checkboxes")
-def main(pat, filter):
-    content_search(Github(pat), filter)
-    
-    table = table_builder() 
-    
+def write_readme(table):
+    # Clear old data before rewriting
+    open("README.md", "w").close()
+
     with open("README.md", "w") as f:
         f.write(table)
+
+
+@click.command()
+@click.option("--pat", "-p", help="Github access token")
+@click.option("--filter", "-f", is_flag=True, default=False, help="Filter out repos that have no checkboxes")
+@click.option("--write-from-data", "-d", is_flag=True, default=False, help="Write README.md table from stored data")
+def main(pat, filter, write_from_data):
+    if not write_from_data:
+        content_search(Github(pat))
+
+    table = table_builder(filter) 
+    write_readme(table)
 
 
 if __name__ == "__main__":
