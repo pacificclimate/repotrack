@@ -1,8 +1,8 @@
 name: Update Table
 
-on:
-  schedule:
-    - cron: '0 7 * * MON'
+on: [push]
+  # schedule:
+  #   - cron: '0 7 * * MON'
 
 jobs:
   update-table:
@@ -25,3 +25,6 @@ jobs:
         sudo apt-get install pipenv
         pipenv install
         pipenv install --dev
+
+    - name: Run script
+      run: pipenv run python repotrack/repotrack.py --gat ${{ secrets.ACCESS_TOKEN }} --savepath data/devops.json --no-empties
