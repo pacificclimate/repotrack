@@ -23,7 +23,7 @@ jobs:
         pipenv install --dev
 
     - name: Run script
-      run: pipenv run python repotrack/repotrack.py --gat ${{ secrets.ACCESS_TOKEN }} --loadpath data/devops.json --no-empties
+      run: pipenv run python repotrack/repotrack.py --gat ${{ secrets.ACCESS_TOKEN }} --no-empties
 
     - name: Check for changes
       run: |
