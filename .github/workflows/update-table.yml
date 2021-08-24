@@ -30,5 +30,5 @@ jobs:
         echo "nochanges=$(git diff --quiet)" >> $GITHUB_ENV
 
     - name: Apply changes
-      if: ${{ env.nochanges == 1 }}
+      if: ${{ env.nochanges == 0 }}
       run: git status
