@@ -21,8 +21,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        sudo apt-get update
-        sudo apt-get install pipenv
+        pip install -U pipenv
         pipenv install
         pipenv install --dev
 
