@@ -26,4 +26,12 @@ jobs:
         pipenv install --dev
 
     - name: Run script
+<<<<<<< HEAD
       run: pipenv run python repotrack/repotrack.py --gat ${{ secrets.ACCESS_TOKEN }} --savepath data/devops.json --no-empties
+=======
+      run: pipenv run python repotrack/repotrack.py --gat ${{ secrets.ACCESS_TOKEN }} --savepath data/devops.json --no-empties
+
+    - name: Check for changes
+      run: |
+        git status
+>>>>>>> 1e332bc... Fixes
