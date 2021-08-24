@@ -31,8 +31,8 @@ jobs:
     - name: Check for changes
       run: |
         git diff --quiet; nochanges=$?
-        echo $nochanges
+        echo $nochanges >> $GITHUB_ENV
 
     - name: Apply changes
-      if: ${{ nochanges }} == 1
+      if: ${{ env.nochanges == 1 }}
       run: git status
