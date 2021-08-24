@@ -12,7 +12,7 @@ def search_for_devops(gat, organization):
 
     def devops_checklist(repo):
         """Helper method to build list of devops tools used with help from `checklist`"""
-        stuff = [name for name, method in checklist.items() if method(repo)]
+        return [name for name, method in checklist.items() if method(repo)]
 
     devops_data = {
         repo.name: devops_checklist(repo)
