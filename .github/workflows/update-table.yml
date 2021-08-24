@@ -34,5 +34,5 @@ jobs:
         echo $nochanges
 
     - name: Apply changes
-      if: ${{ $nochanges == 1 }}
+      if: ${{ nochanges }} == 1
       run: git status
