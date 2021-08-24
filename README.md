@@ -1,84 +1,84 @@
 | Repo | actions | anchore | daccs | docker | jenkins | make | pip | pipenv | snyk |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| [actions-runner-config](https://github.com/pacificclimate/actions-runner-config) | | | | **X** | | | | | |
-| [basilveerman-foss4gna-2016-demo](https://github.com/pacificclimate/basilveerman-foss4gna-2016-demo) | | | | | | **X** | | | |
-| [bc-projected-weather](https://github.com/pacificclimate/bc-projected-weather) | | | | | | | **X** | | |
-| [birdhouse-config](https://github.com/pacificclimate/birdhouse-config) | | | **X** | | | | | | |
-| [cf-cell-methods](https://github.com/pacificclimate/cf-cell-methods) | **X** | | | | | | **X** | | |
-| [cfmeta](https://github.com/pacificclimate/cfmeta) | | | | | | **X** | **X** | | |
-| [chickadee](https://github.com/pacificclimate/chickadee) | **X** | | **X** | **X** | | **X** | **X** | | **X** |
-| [climate-explorer-backend](https://github.com/pacificclimate/climate-explorer-backend) | **X** | | | **X** | | **X** | | **X** | |
-| [climate-explorer-data-prep](https://github.com/pacificclimate/climate-explorer-data-prep) | **X** | | | | | | | **X** | |
-| [climate-explorer-frontend](https://github.com/pacificclimate/climate-explorer-frontend) | **X** | | | **X** | | | | | **X** |
-| [climate-explorer-netcdf-tests](https://github.com/pacificclimate/climate-explorer-netcdf-tests) | | | | **X** | | | **X** | | |
-| [climate_explorer-d3-clickhandler](https://github.com/pacificclimate/climate_explorer-d3-clickhandler) | | | | | | **X** | | | |
-| [climdex.pcic.ncdf](https://github.com/pacificclimate/climdex.pcic.ncdf) | **X** | | | | | | | | |
-| [climpyrical](https://github.com/pacificclimate/climpyrical) | **X** | | | | | **X** | **X** | | |
-| [crmp-helpers](https://github.com/pacificclimate/crmp-helpers) | | | | | | | **X** | | |
-| [crmprtd](https://github.com/pacificclimate/crmprtd) | **X** | | | | | **X** | **X** | **X** | |
-| [dash-dv-explorer](https://github.com/pacificclimate/dash-dv-explorer) | **X** | | | **X** | | | | **X** | |
-| [docker-compose-test](https://github.com/pacificclimate/docker-compose-test) | | | | **X** | | | **X** | | |
-| [docker-geospatial-python](https://github.com/pacificclimate/docker-geospatial-python) | **X** | **X** | | **X** | | | | | |
-| [docker-guniflask](https://github.com/pacificclimate/docker-guniflask) | | | | **X** | | | | | |
-| [docker-imposm](https://github.com/pacificclimate/docker-imposm) | | | | **X** | | | | | |
-| [docker-imposm3](https://github.com/pacificclimate/docker-imposm3) | | | | **X** | | | | | |
-| [docker-ncwms](https://github.com/pacificclimate/docker-ncwms) | **X** | | | **X** | | | | | |
-| [docker-netcdf](https://github.com/pacificclimate/docker-netcdf) | | | | **X** | | | | | |
-| [docker-pypi](https://github.com/pacificclimate/docker-pypi) | | | | **X** | | **X** | | | |
-| [docker-tilestache](https://github.com/pacificclimate/docker-tilestache) | | | | **X** | | | | | |
-| [esgf_download](https://github.com/pacificclimate/esgf_download) | | | | | | | **X** | | |
-| [genimage](https://github.com/pacificclimate/genimage) | | | | **X** | | **X** | | | |
-| [geo-features-service](https://github.com/pacificclimate/geo-features-service) | | | | | | | **X** | | |
-| [geoserver](https://github.com/pacificclimate/geoserver) | **X** | **X** | | **X** | | | | | |
-| [gulpy_plus_plus](https://github.com/pacificclimate/gulpy_plus_plus) | | | | | | | **X** | | |
-| [hydro-conductor](https://github.com/pacificclimate/hydro-conductor) | | | | | | | **X** | | |
-| [jenkins-library](https://github.com/pacificclimate/jenkins-library) | | | | | **X** | | | | |
-| [jobqueueing](https://github.com/pacificclimate/jobqueueing) | | | | | | | **X** | | |
-| [modelmeta](https://github.com/pacificclimate/modelmeta) | **X** | | | | | **X** | | **X** | |
-| [nchelpers](https://github.com/pacificclimate/nchelpers) | **X** | | | | | | **X** | | |
-| [nclint](https://github.com/pacificclimate/nclint) | | | | | | | **X** | | |
-| [ncwms](https://github.com/pacificclimate/ncwms) | | | | **X** | | | | | |
-| [ncWMS-mm-rproxy](https://github.com/pacificclimate/ncWMS-mm-rproxy) | **X** | | | **X** | | | **X** | | |
-| [netcdf-generator](https://github.com/pacificclimate/netcdf-generator) | | | | | | | **X** | | |
-| [netcdf-pycli](https://github.com/pacificclimate/netcdf-pycli) | | | | | | | **X** | | |
-| [netcdf-tutorial](https://github.com/pacificclimate/netcdf-tutorial) | | | | | | | **X** | | |
-| [orca](https://github.com/pacificclimate/orca) | **X** | | | **X** | | **X** | | **X** | **X** |
-| [osprey](https://github.com/pacificclimate/osprey) | **X** | | **X** | **X** | | **X** | **X** | | **X** |
-| [osprey-flask-app](https://github.com/pacificclimate/osprey-flask-app) | **X** | | | | | **X** | | **X** | |
-| [p2a-rule-engine](https://github.com/pacificclimate/p2a-rule-engine) | **X** | | | | | **X** | **X** | | |
-| [pcdapi](https://github.com/pacificclimate/pcdapi) | | | | | | | **X** | | |
-| [pcds_ml](https://github.com/pacificclimate/pcds_ml) | | | | | | | **X** | | |
-| [pcic-metadata-standard](https://github.com/pacificclimate/pcic-metadata-standard) | | | | | | | **X** | | |
-| [pcic-react-leaflet-components](https://github.com/pacificclimate/pcic-react-leaflet-components) | **X** | | | **X** | | | | | |
-| [pdp](https://github.com/pacificclimate/pdp) | **X** | | | **X** | | | **X** | | |
-| [pdp-docker](https://github.com/pacificclimate/pdp-docker) | **X** | | | | | | | | |
-| [pdp-download-tester](https://github.com/pacificclimate/pdp-download-tester) | | | | | | | **X** | | |
-| [pdp-pcds](https://github.com/pacificclimate/pdp-pcds) | | | | | **X** | | **X** | | |
-| [pdp_util](https://github.com/pacificclimate/pdp_util) | **X** | | | **X** | | | **X** | | |
-| [plan2adapt-v2](https://github.com/pacificclimate/plan2adapt-v2) | **X** | **X** | | **X** | | | | | |
-| [pupynere-pdp](https://github.com/pacificclimate/pupynere-pdp) | **X** | | | | | | | | |
-| [pycds](https://github.com/pacificclimate/pycds) | **X** | | | **X** | | **X** | | **X** | |
-| [pycds-alembic-client](https://github.com/pacificclimate/pycds-alembic-client) | **X** | | | **X** | | | **X** | | |
-| [pyclimate](https://github.com/pacificclimate/pyclimate) | | | | | | | **X** | | |
-| [pydap-extras](https://github.com/pacificclimate/pydap-extras) | **X** | | | | | | **X** | | |
-| [pydap-test](https://github.com/pacificclimate/pydap-test) | | | | **X** | | | **X** | | |
-| [pydap.handlers.hdf5](https://github.com/pacificclimate/pydap.handlers.hdf5) | | | | | | | **X** | | |
-| [pydap.handlers.netcdf4](https://github.com/pacificclimate/pydap.handlers.netcdf4) | | | | | | | **X** | | |
-| [pydap.handlers.pcic](https://github.com/pacificclimate/pydap.handlers.pcic) | | | | | | | **X** | | |
-| [pydap.responses.aaigrid](https://github.com/pacificclimate/pydap.responses.aaigrid) | | | | | | | **X** | | |
-| [pydap.responses.netcdf](https://github.com/pacificclimate/pydap.responses.netcdf) | | | | | | | **X** | | |
-| [quail](https://github.com/pacificclimate/quail) | **X** | | **X** | **X** | | **X** | **X** | | **X** |
-| [rvic-daccs](https://github.com/pacificclimate/rvic-daccs) | **X** | | **X** | | | **X** | **X** | | |
-| [sandpiper](https://github.com/pacificclimate/sandpiper) | **X** | | **X** | **X** | | **X** | **X** | | **X** |
-| [scenarios](https://github.com/pacificclimate/scenarios) | | | | **X** | | | | | |
-| [scenarios-basemaps](https://github.com/pacificclimate/scenarios-basemaps) | | | | **X** | | | | | |
-| [station-data-portal](https://github.com/pacificclimate/station-data-portal) | **X** | | | **X** | | | | | |
-| [station-data-portal-backend](https://github.com/pacificclimate/station-data-portal-backend) | **X** | | | **X** | | | **X** | | |
-| [thunderbird](https://github.com/pacificclimate/thunderbird) | **X** | | **X** | **X** | | **X** | **X** | | **X** |
-| [VIC](https://github.com/pacificclimate/VIC) | | | | | | **X** | | | |
-| [weather-anomaly-data-service](https://github.com/pacificclimate/weather-anomaly-data-service) | | | | **X** | | | **X** | | |
-| [weather-anomaly-tool](https://github.com/pacificclimate/weather-anomaly-tool) | **X** | **X** | | **X** | | | | | |
-| [wps-tools](https://github.com/pacificclimate/wps-tools) | **X** | | | | | | | **X** | |
-| [wx-files-frontend](https://github.com/pacificclimate/wx-files-frontend) | **X** | **X** | | **X** | | | | | |
-| [wx-files-service](https://github.com/pacificclimate/wx-files-service) | **X** | **X** | | **X** | | | **X** | | |
-| [x-metadata-selector](https://github.com/pacificclimate/x-metadata-selector) | | | | **X** | | | | | |
+| [actions-runner-config](https://github.com/pacificclimate/actions-runner-config) | | | | :heavy_check_mark: | | | | | |
+| [basilveerman-foss4gna-2016-demo](https://github.com/pacificclimate/basilveerman-foss4gna-2016-demo) | | | | | | :heavy_check_mark: | | | |
+| [bc-projected-weather](https://github.com/pacificclimate/bc-projected-weather) | | | | | | | :heavy_check_mark: | | |
+| [birdhouse-config](https://github.com/pacificclimate/birdhouse-config) | | | :heavy_check_mark: | | | | | | |
+| [cf-cell-methods](https://github.com/pacificclimate/cf-cell-methods) | :heavy_check_mark: | | | | | | :heavy_check_mark: | | |
+| [cfmeta](https://github.com/pacificclimate/cfmeta) | | | | | | :heavy_check_mark: | :heavy_check_mark: | | |
+| [chickadee](https://github.com/pacificclimate/chickadee) | :heavy_check_mark: | | :heavy_check_mark: | :heavy_check_mark: | | :heavy_check_mark: | :heavy_check_mark: | | :heavy_check_mark: |
+| [climate-explorer-backend](https://github.com/pacificclimate/climate-explorer-backend) | :heavy_check_mark: | | | :heavy_check_mark: | | :heavy_check_mark: | | :heavy_check_mark: | |
+| [climate-explorer-data-prep](https://github.com/pacificclimate/climate-explorer-data-prep) | :heavy_check_mark: | | | | | | | :heavy_check_mark: | |
+| [climate-explorer-frontend](https://github.com/pacificclimate/climate-explorer-frontend) | :heavy_check_mark: | | | :heavy_check_mark: | | | | | :heavy_check_mark: |
+| [climate-explorer-netcdf-tests](https://github.com/pacificclimate/climate-explorer-netcdf-tests) | | | | :heavy_check_mark: | | | :heavy_check_mark: | | |
+| [climate_explorer-d3-clickhandler](https://github.com/pacificclimate/climate_explorer-d3-clickhandler) | | | | | | :heavy_check_mark: | | | |
+| [climdex.pcic.ncdf](https://github.com/pacificclimate/climdex.pcic.ncdf) | :heavy_check_mark: | | | | | | | | |
+| [climpyrical](https://github.com/pacificclimate/climpyrical) | :heavy_check_mark: | | | | | :heavy_check_mark: | :heavy_check_mark: | | |
+| [crmp-helpers](https://github.com/pacificclimate/crmp-helpers) | | | | | | | :heavy_check_mark: | | |
+| [crmprtd](https://github.com/pacificclimate/crmprtd) | :heavy_check_mark: | | | | | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | |
+| [dash-dv-explorer](https://github.com/pacificclimate/dash-dv-explorer) | :heavy_check_mark: | | | :heavy_check_mark: | | | | :heavy_check_mark: | |
+| [docker-compose-test](https://github.com/pacificclimate/docker-compose-test) | | | | :heavy_check_mark: | | | :heavy_check_mark: | | |
+| [docker-geospatial-python](https://github.com/pacificclimate/docker-geospatial-python) | :heavy_check_mark: | :heavy_check_mark: | | :heavy_check_mark: | | | | | |
+| [docker-guniflask](https://github.com/pacificclimate/docker-guniflask) | | | | :heavy_check_mark: | | | | | |
+| [docker-imposm](https://github.com/pacificclimate/docker-imposm) | | | | :heavy_check_mark: | | | | | |
+| [docker-imposm3](https://github.com/pacificclimate/docker-imposm3) | | | | :heavy_check_mark: | | | | | |
+| [docker-ncwms](https://github.com/pacificclimate/docker-ncwms) | :heavy_check_mark: | | | :heavy_check_mark: | | | | | |
+| [docker-netcdf](https://github.com/pacificclimate/docker-netcdf) | | | | :heavy_check_mark: | | | | | |
+| [docker-pypi](https://github.com/pacificclimate/docker-pypi) | | | | :heavy_check_mark: | | :heavy_check_mark: | | | |
+| [docker-tilestache](https://github.com/pacificclimate/docker-tilestache) | | | | :heavy_check_mark: | | | | | |
+| [esgf_download](https://github.com/pacificclimate/esgf_download) | | | | | | | :heavy_check_mark: | | |
+| [genimage](https://github.com/pacificclimate/genimage) | | | | :heavy_check_mark: | | :heavy_check_mark: | | | |
+| [geo-features-service](https://github.com/pacificclimate/geo-features-service) | | | | | | | :heavy_check_mark: | | |
+| [geoserver](https://github.com/pacificclimate/geoserver) | :heavy_check_mark: | :heavy_check_mark: | | :heavy_check_mark: | | | | | |
+| [gulpy_plus_plus](https://github.com/pacificclimate/gulpy_plus_plus) | | | | | | | :heavy_check_mark: | | |
+| [hydro-conductor](https://github.com/pacificclimate/hydro-conductor) | | | | | | | :heavy_check_mark: | | |
+| [jenkins-library](https://github.com/pacificclimate/jenkins-library) | | | | | :heavy_check_mark: | | | | |
+| [jobqueueing](https://github.com/pacificclimate/jobqueueing) | | | | | | | :heavy_check_mark: | | |
+| [modelmeta](https://github.com/pacificclimate/modelmeta) | :heavy_check_mark: | | | | | :heavy_check_mark: | | :heavy_check_mark: | |
+| [nchelpers](https://github.com/pacificclimate/nchelpers) | :heavy_check_mark: | | | | | | :heavy_check_mark: | | |
+| [nclint](https://github.com/pacificclimate/nclint) | | | | | | | :heavy_check_mark: | | |
+| [ncwms](https://github.com/pacificclimate/ncwms) | | | | :heavy_check_mark: | | | | | |
+| [ncWMS-mm-rproxy](https://github.com/pacificclimate/ncWMS-mm-rproxy) | :heavy_check_mark: | | | :heavy_check_mark: | | | :heavy_check_mark: | | |
+| [netcdf-generator](https://github.com/pacificclimate/netcdf-generator) | | | | | | | :heavy_check_mark: | | |
+| [netcdf-pycli](https://github.com/pacificclimate/netcdf-pycli) | | | | | | | :heavy_check_mark: | | |
+| [netcdf-tutorial](https://github.com/pacificclimate/netcdf-tutorial) | | | | | | | :heavy_check_mark: | | |
+| [orca](https://github.com/pacificclimate/orca) | :heavy_check_mark: | | | :heavy_check_mark: | | :heavy_check_mark: | | :heavy_check_mark: | :heavy_check_mark: |
+| [osprey](https://github.com/pacificclimate/osprey) | :heavy_check_mark: | | :heavy_check_mark: | :heavy_check_mark: | | :heavy_check_mark: | :heavy_check_mark: | | :heavy_check_mark: |
+| [osprey-flask-app](https://github.com/pacificclimate/osprey-flask-app) | :heavy_check_mark: | | | | | :heavy_check_mark: | | :heavy_check_mark: | |
+| [p2a-rule-engine](https://github.com/pacificclimate/p2a-rule-engine) | :heavy_check_mark: | | | | | :heavy_check_mark: | :heavy_check_mark: | | |
+| [pcdapi](https://github.com/pacificclimate/pcdapi) | | | | | | | :heavy_check_mark: | | |
+| [pcds_ml](https://github.com/pacificclimate/pcds_ml) | | | | | | | :heavy_check_mark: | | |
+| [pcic-metadata-standard](https://github.com/pacificclimate/pcic-metadata-standard) | | | | | | | :heavy_check_mark: | | |
+| [pcic-react-leaflet-components](https://github.com/pacificclimate/pcic-react-leaflet-components) | :heavy_check_mark: | | | :heavy_check_mark: | | | | | |
+| [pdp](https://github.com/pacificclimate/pdp) | :heavy_check_mark: | | | :heavy_check_mark: | | | :heavy_check_mark: | | |
+| [pdp-docker](https://github.com/pacificclimate/pdp-docker) | :heavy_check_mark: | | | | | | | | |
+| [pdp-download-tester](https://github.com/pacificclimate/pdp-download-tester) | | | | | | | :heavy_check_mark: | | |
+| [pdp-pcds](https://github.com/pacificclimate/pdp-pcds) | | | | | :heavy_check_mark: | | :heavy_check_mark: | | |
+| [pdp_util](https://github.com/pacificclimate/pdp_util) | :heavy_check_mark: | | | :heavy_check_mark: | | | :heavy_check_mark: | | |
+| [plan2adapt-v2](https://github.com/pacificclimate/plan2adapt-v2) | :heavy_check_mark: | :heavy_check_mark: | | :heavy_check_mark: | | | | | |
+| [pupynere-pdp](https://github.com/pacificclimate/pupynere-pdp) | :heavy_check_mark: | | | | | | | | |
+| [pycds](https://github.com/pacificclimate/pycds) | :heavy_check_mark: | | | :heavy_check_mark: | | :heavy_check_mark: | | :heavy_check_mark: | |
+| [pycds-alembic-client](https://github.com/pacificclimate/pycds-alembic-client) | :heavy_check_mark: | | | :heavy_check_mark: | | | :heavy_check_mark: | | |
+| [pyclimate](https://github.com/pacificclimate/pyclimate) | | | | | | | :heavy_check_mark: | | |
+| [pydap-extras](https://github.com/pacificclimate/pydap-extras) | :heavy_check_mark: | | | | | | :heavy_check_mark: | | |
+| [pydap-test](https://github.com/pacificclimate/pydap-test) | | | | :heavy_check_mark: | | | :heavy_check_mark: | | |
+| [pydap.handlers.hdf5](https://github.com/pacificclimate/pydap.handlers.hdf5) | | | | | | | :heavy_check_mark: | | |
+| [pydap.handlers.netcdf4](https://github.com/pacificclimate/pydap.handlers.netcdf4) | | | | | | | :heavy_check_mark: | | |
+| [pydap.handlers.pcic](https://github.com/pacificclimate/pydap.handlers.pcic) | | | | | | | :heavy_check_mark: | | |
+| [pydap.responses.aaigrid](https://github.com/pacificclimate/pydap.responses.aaigrid) | | | | | | | :heavy_check_mark: | | |
+| [pydap.responses.netcdf](https://github.com/pacificclimate/pydap.responses.netcdf) | | | | | | | :heavy_check_mark: | | |
+| [quail](https://github.com/pacificclimate/quail) | :heavy_check_mark: | | :heavy_check_mark: | :heavy_check_mark: | | :heavy_check_mark: | :heavy_check_mark: | | :heavy_check_mark: |
+| [rvic-daccs](https://github.com/pacificclimate/rvic-daccs) | :heavy_check_mark: | | :heavy_check_mark: | | | :heavy_check_mark: | :heavy_check_mark: | | |
+| [sandpiper](https://github.com/pacificclimate/sandpiper) | :heavy_check_mark: | | :heavy_check_mark: | :heavy_check_mark: | | :heavy_check_mark: | :heavy_check_mark: | | :heavy_check_mark: |
+| [scenarios](https://github.com/pacificclimate/scenarios) | | | | :heavy_check_mark: | | | | | |
+| [scenarios-basemaps](https://github.com/pacificclimate/scenarios-basemaps) | | | | :heavy_check_mark: | | | | | |
+| [station-data-portal](https://github.com/pacificclimate/station-data-portal) | :heavy_check_mark: | | | :heavy_check_mark: | | | | | |
+| [station-data-portal-backend](https://github.com/pacificclimate/station-data-portal-backend) | :heavy_check_mark: | | | :heavy_check_mark: | | | :heavy_check_mark: | | |
+| [thunderbird](https://github.com/pacificclimate/thunderbird) | :heavy_check_mark: | | :heavy_check_mark: | :heavy_check_mark: | | :heavy_check_mark: | :heavy_check_mark: | | :heavy_check_mark: |
+| [VIC](https://github.com/pacificclimate/VIC) | | | | | | :heavy_check_mark: | | | |
+| [weather-anomaly-data-service](https://github.com/pacificclimate/weather-anomaly-data-service) | | | | :heavy_check_mark: | | | :heavy_check_mark: | | |
+| [weather-anomaly-tool](https://github.com/pacificclimate/weather-anomaly-tool) | :heavy_check_mark: | :heavy_check_mark: | | :heavy_check_mark: | | | | | |
+| [wps-tools](https://github.com/pacificclimate/wps-tools) | :heavy_check_mark: | | | | | | | :heavy_check_mark: | |
+| [wx-files-frontend](https://github.com/pacificclimate/wx-files-frontend) | :heavy_check_mark: | :heavy_check_mark: | | :heavy_check_mark: | | | | | |
+| [wx-files-service](https://github.com/pacificclimate/wx-files-service) | :heavy_check_mark: | :heavy_check_mark: | | :heavy_check_mark: | | | :heavy_check_mark: | | |
+| [x-metadata-selector](https://github.com/pacificclimate/x-metadata-selector) | | | | :heavy_check_mark: | | | | | |

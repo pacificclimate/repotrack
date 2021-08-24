@@ -73,7 +73,7 @@ def table_builder(devops_data, organization, no_empties):
         row = f"| [{repo_name}](https://github.com/{organization}/{repo_name}) |"
         for col in cols:
             if col in tools:
-                row += f" **X** |"
+                row += f" :heavy_check_mark: |"
             else:
                 row += f" |"
         row += "\n"
