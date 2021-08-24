@@ -3,7 +3,7 @@ from github import Github
 import json
 
 from checks import checklist
-from utils import table_builder, table_to_file, load_from_file
+from utils import table_builder, eprint
 
 
 def search_for_devops(gat, organization):
@@ -29,45 +29,29 @@ def search_for_devops(gat, organization):
     "--organization", "-o", default="pacificclimate", help="Target organization"
 )
 @click.option(
-    "--savepath",
-    "-s",
-    default="",
-    help="Filepath to json file where you wish to save collected data",
-)
-@click.option(
-    "--loadpath",
-    "-l",
-    default="",
-    help="Write DevOps table from stored data",
-)
-@click.option(
     "--no-empties",
     "-n",
     is_flag=True,
     default=False,
     help="Filter out repos that have no DevOps tools",
 )
-def main(gat, organization, savepath, loadpath, no_empties):
-    """Run through process of collecting repo data and reporting it to a file"""
-    print("Starting...")
-    if loadpath:
-        print("Loading from file")
-        devops_data = load_from_file(loadpath)
+def main(gat, organization, no_empties):
+    """Run through process of collecting repo data and reporting it to stdout
 
-    else:
-        print("Searching with Github API")
-        devops_data = search_for_devops(gat, organization)
+    The result of this script is written to stdout and can be piped into a file using `tee`. 
+    The "logging" messages are written to stderr and will not be recorded in the file.
+    
+    Example:
+        pipenv run python repotrack/repotrack.py --gat $GITHUB_GAT --no-empties | tee README.md
+    """
+    eprint("Starting...")
+    devops_data = search_for_devops(gat, organization)
 
-    if savepath:
-        print("Saving for later...")
-        with open(savepath, "w") as f:
-            json.dump(devops_data, f)
-
-    print("Building table")
+    eprint("Building table")
     table = table_builder(devops_data, organization, no_empties)
 
-    print("Writing table")
-    table_to_file(table)
+    eprint("Finished...")
+    print(table)
 
 
 if __name__ == "__main__":

@@ -1,5 +1,6 @@
 from os import write
 import json
+import sys
 
 
 def get_contents(repo, path=""):
@@ -44,14 +45,6 @@ def build_header(cols):
     return header + "\n"
 
 
-def load_from_file(loadpath):
-    """Loads json into dict"""
-    with open(loadpath, "r") as f:
-        data = json.loads(f.read())
-
-    return data
-
-
 def table_builder(devops_data, organization, no_empties):
     """Build a markdown table out of the collected data"""
     cols = unique_cols(devops_data)
@@ -82,10 +75,6 @@ def table_builder(devops_data, organization, no_empties):
     return header + rows
 
 
-def table_to_file(table, filename="README"):
-    """Write DevOps tool table to markdown file"""
-    # Remove old stuff beforehand
-    open(f"{filename}.md", "w").close()
-
-    with open(f"{filename}.md", "w") as f:
-        f.write(table)
+def eprint(string):
+    """Write to stderr"""
+    sys.stderr.write(f"{string}\n")
