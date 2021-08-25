@@ -1,8 +1,8 @@
 name: Update Table
 
-on:
-  schedule:
-    - cron: '0 7 * * MON'
+on: [push]
+  # schedule:
+  #   - cron: '0 7 * * MON'
 
 jobs:
   update-table:
