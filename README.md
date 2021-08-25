@@ -68,6 +68,7 @@
 | [pydap.responses.aaigrid](https://github.com/pacificclimate/pydap.responses.aaigrid) | | | | | | | :heavy_check_mark: | | |
 | [pydap.responses.netcdf](https://github.com/pacificclimate/pydap.responses.netcdf) | | | | | | | :heavy_check_mark: | | |
 | [quail](https://github.com/pacificclimate/quail) | :heavy_check_mark: | | :heavy_check_mark: | :heavy_check_mark: | | :heavy_check_mark: | :heavy_check_mark: | | :heavy_check_mark: |
+| [repotrack](https://github.com/pacificclimate/repotrack) | | | | | | | | :heavy_check_mark: | |
 | [rvic-daccs](https://github.com/pacificclimate/rvic-daccs) | :heavy_check_mark: | | :heavy_check_mark: | | | :heavy_check_mark: | :heavy_check_mark: | | |
 | [sandpiper](https://github.com/pacificclimate/sandpiper) | :heavy_check_mark: | | :heavy_check_mark: | :heavy_check_mark: | | :heavy_check_mark: | :heavy_check_mark: | | :heavy_check_mark: |
 | [scenarios](https://github.com/pacificclimate/scenarios) | | | | :heavy_check_mark: | | | | | |
@@ -82,3 +83,4 @@
 | [wx-files-frontend](https://github.com/pacificclimate/wx-files-frontend) | :heavy_check_mark: | :heavy_check_mark: | | :heavy_check_mark: | | | | | |
 | [wx-files-service](https://github.com/pacificclimate/wx-files-service) | :heavy_check_mark: | :heavy_check_mark: | | :heavy_check_mark: | | | :heavy_check_mark: | | |
 | [x-metadata-selector](https://github.com/pacificclimate/x-metadata-selector) | | | | :heavy_check_mark: | | | | | |
+
