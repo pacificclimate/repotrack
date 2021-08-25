@@ -28,6 +28,7 @@ jobs:
     - name: Check for changes
       run: |
         echo "nochanges=$(git diff --quiet)" >> $GITHUB_ENV
+        echo ${{ env.nochanges }}
 
     - name: Create pull request
       if: ${{ env.nochanges == 1 }}
