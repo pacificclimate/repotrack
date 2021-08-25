@@ -26,11 +26,12 @@ def search_for_devops(gat, organization):
 def recent_commit_date(repo):
     try:
         latest, *_ = repo.get_commits()
-        return latest.commit.committer.date
     
     except:
         return None
-        
+
+    return latest.commit.committer.date
+
 
 @click.command()
 @click.option("--gat", "-g", help="Github access token")
