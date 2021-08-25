@@ -15,13 +15,22 @@ def search_for_devops(gat, organization):
         return [name for name, method in checklist.items() if method(repo)]
 
     devops_data = {
-        repo.name: devops_checklist(repo)
+        repo.name: (recent_commit_date(repo), devops_checklist(repo))
         for repo in hub.get_user().get_repos()
         if repo.organization and repo.organization.login == organization
     }
 
     return devops_data
 
+
+def recent_commit_date(repo):
+    try:
+        latest, *_ = repo.get_commits()
+        return latest.commit.committer.date
+    
+    except:
+        return None
+        
 
 @click.command()
 @click.option("--gat", "-g", help="Github access token")
@@ -47,6 +56,9 @@ def main(gat, organization, no_empties):
     eprint("Starting...")
     devops_data = search_for_devops(gat, organization)
 
+    print(devops_data)
+    import sys
+    sys.exit(0)
     eprint("Building table")
     table = table_builder(devops_data, organization, no_empties)
 
@@ -56,3 +68,4 @@ def main(gat, organization, no_empties):
 
 if __name__ == "__main__":
     main()
+    
