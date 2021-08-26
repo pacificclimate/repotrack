@@ -83,7 +83,7 @@ def table_builder(devops_data, organization, no_empties, ordered):
     rows = ""
     for devops_datum in devops_data:
         row = f'| [{devops_datum["name"]}](https://github.com/{organization}/{devops_datum["name"]}) |'
-        row += f' {devops_datum["date"]} |'
+        row += f' {devops_datum["date"].strftime("%Y-%m-%d")} |'
 
         for col in cols:
             if col in devops_datum["tools"]:
