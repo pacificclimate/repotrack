@@ -23,7 +23,7 @@ jobs:
         pipenv install --dev
 
     - name: Run script
-      run: pipenv run python repotrack/repotrack.py --gat ${{ secrets.ACCESS_TOKEN }} --no-empties | tee README.md
+      run: pipenv run python repotrack/repotrack.py --gat ${{ secrets.ACCESS_TOKEN }} --no-empties --ordered | tee README.md
 
     - name: Check for changes
       run: |
