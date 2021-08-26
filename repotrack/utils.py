@@ -41,7 +41,7 @@ def build_header(cols):
     for col in cols:
         header += f" {col} |"
 
-    header += "\n|:-:|:-:|" + ":-:|" * len(cols)
+    header += "\n|:-:|" + ":-:|" * len(cols)
     return header + "\n"
 
 
