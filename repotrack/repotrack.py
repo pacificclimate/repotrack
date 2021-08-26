@@ -3,7 +3,7 @@ from github import Github
 import json
 
 from checks import checklist
-from utils import table_builder, eprint
+from utils import table_builder, recent_commit_date, eprint
 
 
 def search_for_devops(gat, organization):
@@ -14,23 +14,11 @@ def search_for_devops(gat, organization):
         """Helper method to build list of devops tools used with help from `checklist`"""
         return [name for name, method in checklist.items() if method(repo)]
 
-    devops_data = {
-        repo.name: (recent_commit_date(repo), devops_checklist(repo))
+    return [
+        {"name": repo.name, "date": recent_commit_date(repo), "tools": devops_checklist(repo)}
         for repo in hub.get_user().get_repos()
         if repo.organization and repo.organization.login == organization
-    }
-
-    return devops_data
-
-
-def recent_commit_date(repo):
-    try:
-        latest, *_ = repo.get_commits()
-    
-    except:
-        return None
-
-    return latest.commit.committer.date
+    ]
 
 
 @click.command()
@@ -56,10 +44,8 @@ def main(gat, organization, no_empties):
     """
     eprint("Starting...")
     devops_data = search_for_devops(gat, organization)
+    eprint(devops_data)
 
-    print(devops_data)
-    import sys
-    sys.exit(0)
     eprint("Building table")
     table = table_builder(devops_data, organization, no_empties)
 
