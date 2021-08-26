@@ -37,7 +37,7 @@ def unique_cols(data):
 
 def build_header(cols):
     """Build README table header"""
-    header = "| Repo | Last Updated |"
+    header = "| Repo |"
     for col in cols:
         header += f" {col} |"
 
@@ -83,7 +83,6 @@ def table_builder(devops_data, organization, no_empties, ordered):
     rows = ""
     for devops_datum in devops_data:
         row = f'| [{devops_datum["name"]}](https://github.com/{organization}/{devops_datum["name"]}) |'
-        row += f' {devops_datum["date"].strftime("%Y-%m-%d")} |'
 
         for col in cols:
             if col in devops_datum["tools"]:
