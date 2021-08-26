@@ -56,11 +56,10 @@ def recent_commit_date(repo):
 
 
 def sort_by_date(devops_data):
-    cleaned = [devops_datum for devops_datum in devops_data if devops_datum["date"]]
-    return cleaned.sort(key = lambda x:x["date"])
+    return sorted(devops_data, key=lambda k: k["date"], reverse=True)
 
 
-def table_builder(devops_data, organization, no_empties):
+def table_builder(devops_data, organization, no_empties, ordered):
     """Build a markdown table out of the collected data"""
     cols = unique_cols(devops_data)
     header = build_header(cols)
@@ -73,18 +72,19 @@ def table_builder(devops_data, organization, no_empties):
 
         return filtered
 
-    # if no_empties:
-    #     devops_data = filtering(devops_data)
+    if no_empties:
+        devops_data = filtering(devops_data)
 
-    devops_data = sort_by_date(devops_data)
+    if ordered:
+        devops_data = sort_by_date(devops_data)
 
     rows = ""
     for devops_datum in devops_data:
         row = f'| [{devops_datum["name"]}](https://github.com/{organization}/{devops_datum["name"]}) |'
-        row += f' {devops_data["date"]} |'
+        row += f' {devops_datum["date"]} |'
 
         for col in cols:
-            if col in devops_data["tools"]:
+            if col in devops_datum["tools"]:
                 row += f" :heavy_check_mark: |"
             else:
                 row += f" |"

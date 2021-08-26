@@ -33,7 +33,14 @@ def search_for_devops(gat, organization):
     default=False,
     help="Filter out repos that have no DevOps tools",
 )
-def main(gat, organization, no_empties):
+@click.option(
+    "--ordered",
+    "-r",
+    is_flag=True,
+    default=False,
+    help="Order output by most recently updated",
+)
+def main(gat, organization, no_empties, ordered):
     """Run through process of collecting repo data and reporting it to stdout
 
     The result of this script is written to stdout and can be piped into a file using `tee`. 
@@ -44,10 +51,9 @@ def main(gat, organization, no_empties):
     """
     eprint("Starting...")
     devops_data = search_for_devops(gat, organization)
-    eprint(devops_data)
 
     eprint("Building table")
-    table = table_builder(devops_data, organization, no_empties)
+    table = table_builder(devops_data, organization, no_empties, ordered)
 
     eprint("Finished...")
     print(table)
