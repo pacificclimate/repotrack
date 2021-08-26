@@ -1,5 +1,5 @@
 | Repo | actions | anchore | daccs | docker | jenkins | make | pip | pipenv | snyk |
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 | [repotrack](https://github.com/pacificclimate/repotrack) | :heavy_check_mark: | | | | | | | :heavy_check_mark: | |
 | [station-data-portal](https://github.com/pacificclimate/station-data-portal) | :heavy_check_mark: | | | :heavy_check_mark: | | | | | |
 | [pcic-react-leaflet-components](https://github.com/pacificclimate/pcic-react-leaflet-components) | :heavy_check_mark: | | | :heavy_check_mark: | | | | | |
