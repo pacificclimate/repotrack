@@ -31,7 +31,7 @@ def unique_cols(data):
     for datum in data:
         for tool in datum["tools"]:
             cols.add(tool)
-    
+
     return sorted(cols)
 
 
@@ -46,9 +46,10 @@ def build_header(cols):
 
 
 def recent_commit_date(repo):
+    """Return the date of the most recent commit or None"""
     try:
         latest, *_ = repo.get_commits()
-    
+
     except:
         return None
 
@@ -56,7 +57,8 @@ def recent_commit_date(repo):
 
 
 def sort_by_date(devops_data):
-    return sorted(devops_data, key=lambda k: k["date"], reverse=True)
+    """Sort list by datetime object"""
+    return sorted(devops_data, key=lambda key: key["date"], reverse=True)
 
 
 def table_builder(devops_data, organization, no_empties, ordered):

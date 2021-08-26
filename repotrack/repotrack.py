@@ -15,7 +15,11 @@ def search_for_devops(gat, organization):
         return [name for name, method in checklist.items() if method(repo)]
 
     return [
-        {"name": repo.name, "date": recent_commit_date(repo), "tools": devops_checklist(repo)}
+        {
+            "name": repo.name,
+            "date": recent_commit_date(repo),
+            "tools": devops_checklist(repo),
+        }
         for repo in hub.get_user().get_repos()
         if repo.organization and repo.organization.login == organization
     ]
@@ -43,9 +47,9 @@ def search_for_devops(gat, organization):
 def main(gat, organization, no_empties, ordered):
     """Run through process of collecting repo data and reporting it to stdout
 
-    The result of this script is written to stdout and can be piped into a file using `tee`. 
+    The result of this script is written to stdout and can be piped into a file using `tee`.
     The "logging" messages are written to stderr and will not be recorded in the file.
-    
+
     Example:
         pipenv run python repotrack/repotrack.py --gat $GITHUB_GAT --no-empties | tee README.md
     """
@@ -61,4 +65,3 @@ def main(gat, organization, no_empties, ordered):
 
 if __name__ == "__main__":
     main()
-    
