@@ -1,5 +1,9 @@
 | Repo | actions | daccs | docker | jenkins | make | pip | pipenv | snyk |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| [station-data-portal-backend](https://github.com/pacificclimate/station-data-portal-backend) | :heavy_check_mark: | | :heavy_check_mark: | | | | :heavy_check_mark: | |
+| [osprey-flask-app](https://github.com/pacificclimate/osprey-flask-app) | :heavy_check_mark: | | :heavy_check_mark: | | :heavy_check_mark: | | :heavy_check_mark: | |
+| [pycds](https://github.com/pacificclimate/pycds) | :heavy_check_mark: | | :heavy_check_mark: | | :heavy_check_mark: | | :heavy_check_mark: | |
+| [repotrack](https://github.com/pacificclimate/repotrack) | :heavy_check_mark: | | | | | | :heavy_check_mark: | |
 | [pcic-react-leaflet-components](https://github.com/pacificclimate/pcic-react-leaflet-components) | :heavy_check_mark: | | :heavy_check_mark: | | | | | |
 | [station-data-portal](https://github.com/pacificclimate/station-data-portal) | :heavy_check_mark: | | :heavy_check_mark: | | :heavy_check_mark: | | | |
 | [docker-geospatial-python](https://github.com/pacificclimate/docker-geospatial-python) | :heavy_check_mark: | | :heavy_check_mark: | | | | | :heavy_check_mark: |
@@ -8,15 +12,12 @@
 | [weather-anomaly-tool](https://github.com/pacificclimate/weather-anomaly-tool) | :heavy_check_mark: | | :heavy_check_mark: | | | | | :heavy_check_mark: |
 | [wx-files-frontend](https://github.com/pacificclimate/wx-files-frontend) | :heavy_check_mark: | | :heavy_check_mark: | | | | | :heavy_check_mark: |
 | [geoserver](https://github.com/pacificclimate/geoserver) | :heavy_check_mark: | | :heavy_check_mark: | | | | | :heavy_check_mark: |
-| [repotrack](https://github.com/pacificclimate/repotrack) | :heavy_check_mark: | | | | | | :heavy_check_mark: | |
 | [modelmeta](https://github.com/pacificclimate/modelmeta) | :heavy_check_mark: | | | | :heavy_check_mark: | | :heavy_check_mark: | |
-| [pycds](https://github.com/pacificclimate/pycds) | :heavy_check_mark: | | :heavy_check_mark: | | :heavy_check_mark: | | :heavy_check_mark: | |
 | [dash-dv-explorer](https://github.com/pacificclimate/dash-dv-explorer) | :heavy_check_mark: | | :heavy_check_mark: | | | | :heavy_check_mark: | |
 | [crmprtd](https://github.com/pacificclimate/crmprtd) | :heavy_check_mark: | | | | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | |
 | [pdp_util](https://github.com/pacificclimate/pdp_util) | :heavy_check_mark: | | :heavy_check_mark: | | | :heavy_check_mark: | | |
 | [climate-explorer-data-prep](https://github.com/pacificclimate/climate-explorer-data-prep) | :heavy_check_mark: | | | | | | :heavy_check_mark: | |
 | [wps-tools](https://github.com/pacificclimate/wps-tools) | :heavy_check_mark: | | | | | | :heavy_check_mark: | |
-| [osprey-flask-app](https://github.com/pacificclimate/osprey-flask-app) | :heavy_check_mark: | | | | :heavy_check_mark: | | :heavy_check_mark: | |
 | [orca](https://github.com/pacificclimate/orca) | :heavy_check_mark: | | :heavy_check_mark: | | :heavy_check_mark: | | :heavy_check_mark: | :heavy_check_mark: |
 | [chickadee](https://github.com/pacificclimate/chickadee) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | | :heavy_check_mark: | :heavy_check_mark: | | :heavy_check_mark: |
 | [quail](https://github.com/pacificclimate/quail) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | | :heavy_check_mark: | :heavy_check_mark: | | :heavy_check_mark: |
@@ -32,7 +33,6 @@
 | [actions-runner-config](https://github.com/pacificclimate/actions-runner-config) | | | :heavy_check_mark: | | | | | |
 | [thunderbird](https://github.com/pacificclimate/thunderbird) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | | :heavy_check_mark: | :heavy_check_mark: | | :heavy_check_mark: |
 | [pupynere-pdp](https://github.com/pacificclimate/pupynere-pdp) | :heavy_check_mark: | | | | | | | |
-| [station-data-portal-backend](https://github.com/pacificclimate/station-data-portal-backend) | :heavy_check_mark: | | :heavy_check_mark: | | | :heavy_check_mark: | | |
 | [gulpy_plus_plus](https://github.com/pacificclimate/gulpy_plus_plus) | | | | | | :heavy_check_mark: | | |
 | [pycds-alembic-client](https://github.com/pacificclimate/pycds-alembic-client) | :heavy_check_mark: | | :heavy_check_mark: | | | :heavy_check_mark: | | |
 | [nchelpers](https://github.com/pacificclimate/nchelpers) | :heavy_check_mark: | | | | | :heavy_check_mark: | | |
